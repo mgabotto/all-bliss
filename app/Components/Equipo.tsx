@@ -9,12 +9,13 @@ const equipo = [
 
 export default function Equipo() {
   return (
-    <div className="container flex bg-orange-400">
-      <ul>
+    <div className="flex bg-orange-400">
+      <ul className="flex gap-x-20">
         {equipo.map((person) => {
           return (
-            <li key={person.id}>
-              {person.name} - {person.especialidad}
+            <li className="flex flex-col" key={person.id}>
+              <span>{person.name}</span>
+              <span>{person.especialidad}</span>
             </li>
           );
         })}
