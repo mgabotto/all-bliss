@@ -1,14 +1,15 @@
 "use client"; // This is a client component 👈🏽
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   let Links = [
     { name: "Inicio", link: "/" },
-    { name: "Quienes Somos", link: "/" },
-    { name: "Equipo", link: "/" },
+    { name: "Quienes Somos", link: "#mision" },
+    { name: "Equipo", link: "#equipo" },
     { name: "Noticias", link: "/" },
-    { name: "Contacto", link: "/" },
+    { name: "Contacto", link: "#contact" },
   ];
   let [open, setOpen] = useState(false);
   return (
@@ -33,13 +34,17 @@ export default function Header() {
           }`}
         >
           {Links.map((link) => (
-            <li key={link.name} className="md:ml-7 text-xl md:my-0 my-7">
-              <a
+            <li
+              key={link.name}
+              className="md:ml-8 text-xl md:my-0 my-7 text-center"
+            >
+              <Link
                 href={link.link}
                 className="text-gray-800 hover:text-gray-400 duration-500 "
+                scroll={false}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
           <button>asd</button>
