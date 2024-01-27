@@ -15,7 +15,7 @@ export default function Home() {
         <Mision />
       </div>
       <Equipo />
-      <BlogSection />
+      {/* <BlogSection />  */}
       <Contact />
     </main>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import contact from "../../media/contact.jpg";
+import wpp from "../../media/whatsapp-logo.png";
 
 export default function Contact() {
   return (
@@ -23,9 +24,10 @@ export default function Contact() {
             <p className="text-bold text-xl mt-4">Email</p>
             <p>contactoabya@gmail.com</p>
           </div>
-          <div>
-            <p className="text-bold text-xl mt-4">Whatsapp:</p>
-            <p>1153777997</p>
+          <div className="pt-5 place-content-center self-center">
+            {/* <p className="text-bold text-xl mt-4">Whatsapp:</p>
+            <p>1153777997</p> */}
+            <Image className="w-28" src={wpp} alt="whatsapp" />
           </div>
         </div>
       </div>
