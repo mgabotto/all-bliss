@@ -1,12 +1,35 @@
 import Image from "next/image";
-import foto from "../../media/arboles.jpg";
+import victoriaFoto from "../../media/victoria.jpg";
+import aliciaFoto from "../../media/alicia.jpg";
+import martinFoto from "../../media/martin.jpg";
+import federicoFoto from "../../media/federico.jpg";
 import { ImageResponse } from "next/server";
 
 const equipo = [
-  { id: 1, name: "Federico", especialidad: "Organización y gestión" },
-  { id: 2, name: "Alicia", especialidad: "Evaluación de Proyectos" },
-  { id: 3, name: "Martín", especialidad: "Análisis de procesos" },
-  { id: 4, name: "Victoria", especialidad: "----" },
+  {
+    id: 1,
+    name: "Federico",
+    especialidad: "Organización y gestión",
+    foto: federicoFoto,
+  },
+  {
+    id: 2,
+    name: "Alicia",
+    especialidad: "Evaluación de Proyectos",
+    foto: aliciaFoto,
+  },
+  {
+    id: 3,
+    name: "Martín",
+    especialidad: "Análisis de procesos",
+    foto: martinFoto,
+  },
+  {
+    id: 4,
+    name: "Victoria",
+    especialidad: "----",
+    foto: victoriaFoto,
+  },
 ];
 
 export default function Equipo() {
@@ -24,8 +47,8 @@ export default function Equipo() {
                 key={person.id}
               >
                 <Image
-                  className="w-80 h-80 rounded-full mx-auto"
-                  src={foto}
+                  className="w-80 h-80 rounded-full "
+                  src={person.foto}
                   alt="Profile picture"
                 />
                 <h2 className="text-center text-2xl font-semibold mt-3">
